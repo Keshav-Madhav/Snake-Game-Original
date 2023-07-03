@@ -1,0 +1,144 @@
+:root {
+  --snake-head-fill-color: #3E601F;
+  --snake-body-fill-color: #7A9462;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#canvas-container {
+  position: absolute;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  background-color:rgb(41, 42, 34);
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(3, calc(var(--w) * 1.6));
+  grid-template-rows: repeat(3, calc(var(--h) / 1.4));
+  align-items: center;
+  justify-items: center;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn {
+  width: calc(var(--w) * 1.5);
+  height: calc(var(--h) / 1.5);
+  border-radius: 5px;
+  border: none;
+  background-color: aliceblue;
+
+}
+
+#up {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#left {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#right {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+#down {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+#pause{
+  width: calc(var(--w)/2);
+  height: calc(var(--h) / 3);
+  background-color: #34352b;
+  color: rgb(168, 168, 168);
+  grid-column: 2;
+  grid-row: 2;
+}
+
+#restart{
+  width: calc(var(--w) /2);
+  height: calc(var(--h) / 4);
+  position: absolute;
+  top: 66%;
+  right: 1%;
+  background-color: #373737;
+  color:rgb(218, 218, 218);
+}
+
+/* .btn{
+  border: none;
+  background-color: transparent;
+}
+#up::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: calc(var(--w)) solid transparent;
+  border-right: calc(var(--w)) solid transparent;
+  border-bottom: calc(var(--h) / 1.5) solid rgb(255, 255, 255);
+}
+
+#down::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: calc(var(--w)) solid transparent;
+  border-right: calc(var(--w)) solid transparent;
+  border-top: calc(var(--h) / 1.5) solid rgb(255, 255, 255);
+}
+
+#left::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: calc(var(--h) / 3) solid transparent;
+  border-bottom: calc(var(--h) / 3) solid transparent;
+  border-right: calc(var(--w) * 2) solid rgb(255, 255, 255);
+}
+
+#right::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: calc(var(--h) / 3) solid transparent;
+  border-bottom: calc(var(--h) / 3) solid transparent;
+  border-left: calc(var(--w) * 2) solid rgb(255, 255, 255);
+} */
+
+
+
+.restartBtn {
+  background-color: #292A22;
+  color: #FFFFFF;
+  top: calc(var(--h)*6.5);
+  left: calc(var(--w) * 9.6);
+  position: absolute;
+}
+
+.play-area{
+  width: calc(var(--w)*9.95);
+  height: calc(var(--h)*6.4);
+  background-color: #00000000;
+  z-index: 1;
+  position: absolute;
+  border:4px solid #2B341C;
+}
